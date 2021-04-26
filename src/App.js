@@ -1,9 +1,12 @@
 import React from "react";
-import "./App.css";
-import Layout from "containers/Layout/";
+import Hero from "./components/Hero";
 
-function App() {
-  return <Layout>Abhishek</Layout>;
-}
+const App = (props) => {
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
+};
 
 export default App;
