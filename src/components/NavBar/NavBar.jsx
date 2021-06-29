@@ -6,7 +6,7 @@ import { Link, withRouter } from "react-router-dom";
 class NavBar extends React.Component {
   render() {
     const { location } = this.props;
-    console.log(location.pathname);
+    // console.log(location.pathname);
 
     const homeclass = location.pathname === "/" ? "active-item" : "";
     const aboutclass = location.pathname === "/about" ? "active-item" : "";
