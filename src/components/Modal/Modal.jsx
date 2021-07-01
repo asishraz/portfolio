@@ -2,13 +2,15 @@ import "./Modal.css";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-const Modal = (props) => {
+const Modal = ({ closeModal }) => {
   return ReactDOM.createPortal(
-    <div className="modal-overlay">
-      <div className="modal-container">
+    <div onClick={closeModal} className="modal-overlay">
+      <div onClick={(e) => e.stopPropagation()} className="modal-container">
         <div className="upper-section">
           <h1>Looking for a Front-end Developer?</h1>
-          <p className="close">&times;</p>
+          <p onClick={closeModal} className="close">
+            &times;
+          </p>
         </div>
         <div className="middle-section">
           <h3>Then, you might came in the right place. </h3>
@@ -19,7 +21,7 @@ const Modal = (props) => {
         </div>
 
         <div className="lower-section">
-          <a href="" className="modal-btn btn-red">
+          <a onClick={closeModal} href="" className="modal-btn btn-red">
             Close
           </a>
           <a
